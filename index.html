@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MODIFICAR AQUÍ: Título de la pestaña del navegador -->
+    <title>Gerardo | Invitaciones Digitales Premium</title>
+    
+    <!-- Tipografías de Alta Gama y Diseño Editorial -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR PREMIUM -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <!-- MODIFICAR AQUÍ: Nombre de tu marca -->
+            <a href="#" class="logo">Gerardo</a>
+            <ul class="nav-menu">
+                <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#faqs">Preguntas</a></li>
+            </ul>
+            <!-- MODIFICAR AQUÍ: Tu número de WhatsApp real (con código de país) -->
+            <a href="https://wa.me/521234567890" target="_blank" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.75rem;">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>Invitaciones excepcionales<br>para tu <span>Boda o XV Años</span></h1>
+            <p>El primer gran impacto de tu gran día. Creamos invitaciones digitales interactivas, elegantes y equipadas con la tecnología ideal para tus invitados.</p>
+            <div class="hero-buttons">
+                <a href="#modelos" class="btn btn-primary">Ver Ejemplos</a>
+                <a href="#precios" class="btn btn-secondary">Ver Precios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SECCIÓN MUESTRAS / PORTAFOLIO -->
+    <section class="section-padding bg-alt" id="modelos">
+        <div class="container">
+            <div class="section-header">
+                <span>Colecciones</span>
+                <h2>Diseños de Inspiración</h2>
+                <p>Explora nuestras maquetas interactivas desarrolladas para las mejores galas y recepciones.</p>
+            </div>
+
+            <div class="tabs-container">
+                <button class="tab-btn active" onclick="switchTab('bodas', this)">✨ Bodas</button>
+                <button class="tab-btn" onclick="switchTab('xv', this)">👑 XV Años</button>
+            </div>
+
+            <!-- Panel Bodas -->
+            <div id="panel-bodas" class="gallery-panel active">
+                <div class="demo-card">
+                    <!-- MODIFICAR AQUÍ: Link de tu demo de bodas 1 en Vercel -->
+                    <iframe src="https://tu-demo-boda-1.vercel.app" style="width: 100%; height: 240px; border: none; overflow: hidden;" scrolling="no"></iframe>
+                    <div class="demo-info">
+                        <h3>Elegancia Clásica</h3>
+                        <p>Boda Eterna • Blanco & Oro</p>
+                        <!-- MODIFICAR AQUÍ: Mismo link de arriba para abrir en pestaña nueva -->
+                        <a href="https://tu-demo-boda-1.vercel.app" target="_blank" class="btn btn-secondary">Ver Demo Completa</a>
+                    </div>
+                </div>
+                <div class="demo-card">
+                    <!-- MODIFICAR AQUÍ: Link de tu demo de bodas 2 en Vercel -->
+                    <iframe src="https://tu-demo-boda-2.vercel.app" style="width: 100%; height: 240px; border: none; overflow: hidden;" scrolling="no"></iframe>
+                    <div class="demo-info">
+                        <h3>Botánica Romance</h3>
+                        <p>Boda Eterna • Verde Fresco</p>
+                        <a href="https://tu-demo-boda-2.vercel.app" target="_blank" class="btn btn-secondary">Ver Demo Completa</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel XV Años -->
+            <div id="panel-xv" class="gallery-panel">
+                <div class="demo-card">
+                    <!-- MODIFICAR AQUÍ: Link de tu demo de XV años 1 en Vercel -->
+                    <iframe src="https://tu-app-de-xv.vercel.app" style="width: 100%; height: 240px; border: none; overflow: hidden;" scrolling="no"></iframe>
+                    <div class="demo-info">
+                        <h3>Noche de Estrellas</h3>
+                        <p>XV Años Mágicos • Azul & Plata</p>
+                        <!-- MODIFICAR AQUÍ: Mismo link de arriba para abrir en pestaña nueva -->
+                        <a href="https://tu-app-de-xv.vercel.app" target="_blank" class="btn btn-secondary">Ver Demo Completa</a>
+                    </div>
+                </div>
+                <div class="demo-card">
+                    <!-- MODIFICAR AQUÍ: Link de tu demo de XV años 2 en Vercel -->
+                    <iframe src="https://otra-app-de-xv.vercel.app" style="width: 100%; height: 240px; border: none; overflow: hidden;" scrolling="no"></iframe>
+                    <div class="demo-info">
+                        <h3>Rose Gold Fantasy</h3>
+                        <p>XV Años Mágicos • Glitter Floral</p>
+                        <a href="https://otra-app-de-xv.vercel.app" target="_blank" class="btn btn-secondary">Ver Demo Completa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECCIÓN DE BENEFICIOS -->
+    <section class="section-padding" id="beneficios">
+        <div class="container">
+            <div class="section-header">
+                <span>Ingeniería Funcional</span>
+                <h2>¿Por qué elegir el formato digital?</h2>
+                <p>Elegancia impecable fusionada con herramientas prácticas que tus invitados agradecerán.</p>
+            </div>
+            
+            <div class="grid-beneficios">
+                <div class="beneficio-card">
+                    <div class="icon">🔒</div>
+                    <h3>Pases Únicos con QR</h3>
+                    <p>Seguridad y control total en la entrada de tu evento. Cada invitado recibe un código no transferible listo para escanear en la puerta.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="icon">📊</div>
+                    <h3>Confirmación al Instante</h3>
+                    <p>Olvídate de las llamadas eternas. Tus invitados confirman asistencia con un clic y tú gestionas la lista en tiempo real sin complicaciones.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="icon">🗺️</div>
+                    <h3>Ubicación Guided</h3>
+                    <p>Integración directa con Google Maps y Waze para asegurar que todos tus seres queridos lleguen a tiempo a la ceremonia y recepción.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECCIÓN CÓMO FUNCIONA -->
+    <section class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <span>Metodología</span>
+                <h2>El proceso es simple</h2>
+                <p>Nos encargamos de toda la complejidad técnica para que tú solo disfrutes el camino.</p>
+            </div>
+
+            <div class="grid-pasos">
+                <div class="paso-card">
+                    <div class="paso-numero">01</div>
+                    <h3>Elige tu Estilo</h3>
+                    <p>Seleccionas el plan ideal y nos compartes los detalles fundamentales del evento (música, colores, fotos y ubicaciones).</p>
+                </div>
+                <div class="paso-card">
+                    <div class="paso-numero">02</div>
+                    <h3>Diseño y Desarrollo</h3>
+                    <p>Montamos tu invitación en servidores premium garantizando velocidad de carga ultrarrápida y adaptabilidad móvil perfecta.</p>
+                </div>
+                <div class="paso-card">
+                    <div class="paso-numero">03</div>
+                    <h3>¡Listo para Enviar!</h3>
+                    <p>Te entregamos tu enlace personalizado y el panel de administración QR para que comiences a distribuir tus pases por WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECCIÓN DE PRECIOS -->
+    <section class="section-padding" id="precios">
+        <div class="container">
+            <div class="section-header">
+                <span>Inversión</span>
+                <h2>Paquetes y Planes</h2>
+                <p>Selecciona la experiencia que mejor se adapte a las necesidades del gran día.</p>
+            </div>
+
+            <div class="grid-precios">
+                <div class="precio-card">
+                    <div class="precio-header">
+                        <h3>Esencial Digital</h3>
+                        <p style="color: var(--color-text-secundario); font-size: 0.9rem;">Ideal para celebraciones íntimas</p>
+                        <!-- MODIFICAR AQUÍ: Precio Plan Esencial -->
+                        <div class="price">$1,500 <span>MXN</span></div>
+                    </div>
+                    <ul class="precio-features">
+                        <li>Diseño elegante personalizado</li>
+                        <li>Contador regresivo en tiempo real</li>
+                        <li>Ubicación GPS interactiva</li>
+                        <li>Confirmación vía WhatsApp</li>
+                    </ul>
+                    <!-- MODIFICAR AQUÍ: Tu WhatsApp -->
+                    <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20el%20plan%20Esencial" target="_blank" class="btn btn-secondary btn-precio">Elegir Plan</a>
+                </div>
+
+                <div class="precio-card popular">
+                    <div class="badge-popular">El más elegido</div>
+                    <div class="precio-header">
+                        <h3>Experiencia QR VIP</h3>
+                        <p style="color: var(--color-text-secundario); font-size: 0.9rem;">Control total y distinción extrema</p>
+                        <!-- MODIFICAR AQUÍ: Precio Plan VIP -->
+                        <div class="price">$2,900 <span>MXN</span></div>
+                    </div>
+                    <ul class="precio-features">
+                        <li>Todo lo del plan Esencial</li>
+                        <li><strong>Pases individuales con código QR</strong></li>
+                        <li>Panel administrativo para escanear en puerta</li>
+                        <li>Música de fondo a tu elección</li>
+                        <li>Galería de fotos integrada</li>
+                    </ul>
+                    <!-- MODIFICAR AQUÍ: Tu WhatsApp -->
+                    <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20el%20plan%20QR%20VIP" target="_blank" class="btn btn-primary btn-precio">Elegir Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SECCIÓN GARANTÍA -->
+    <section class="garantia-section">
+        <div class="garantia-content">
+            <div class="shield-icon">🛡️</div>
+            <h2>Tranquilidad Total en tu Evento</h2>
+            <p>Sabemos lo importante que es tu día. Por eso, todos nuestros planes con QR incluyen <strong>soporte de monitoreo técnico activo en vivo</strong> durante las horas de tu recepción. Tu acceso está blindado.</p>
+        </div>
+    </section>
+
+    <!-- 7. SECCIÓN DE TESTIMONIOS -->
+    <section class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <span>Reseñas</span>
+                <h2>Opiniones de Nuestros Clientes</h2>
+                <p>Historias de familias y parejas que transformaron su evento con nosotros.</p>
+            </div>
+
+            <div class="grid-testimonios">
+                <div class="testimonio-card">
+                    <div class="estrellas">★★★★★</div>
+                    <p class="comentario">"Teníamos dudas sobre si los invitados mayores entenderían el QR, pero el sistema es tan limpio que fluyó increíble. ¡El mapa guió a todos directo a la quinta sin perderse!"</p>
+                    <div class="autor">
+                        <h4>Sofía & Alejandro</h4>
+                        <span>Boda • Hacienda de Gala</span>
+                    </div>
+                </div>
+
+                <div class="testimonio-card">
+                    <div class="estrellas">★★★★★</div>
+                    <p class="comentario">"Poder ver quién confirmaba en tiempo real desde mi celular me quitó un estrés enorme encima. La música de fondo al abrirla enamoró a todas mis amigas."</p>
+                    <div class="autor">
+                        <h4>Camila M.</h4>
+                        <span>XV Años • Salón Esmeralda</span>
+                    </div>
+                </div>
+
+                <div class="testimonio-card">
+                    <div class="estrellas">★★★★★</div>
+                    <p class="comentario">"Contratamos el plan VIP para los XV de mi hija. El escaneo QR en la entrada hizo que la recepción se sintiera súper exclusiva, como una alfombra roja. ¡Vale cada centavo!"</p>
+                    <div class="autor">
+                        <h4>Guadalupe R.</h4>
+                        <span>Mamá de Quinceañera • Salón Cristal</span>
+                    </div>
+                </div>
+
+                <div class="testimonio-card">
+                    <div class="estrellas">★★★★★</div>
+                    <p class="comentario">"Un servicio excelente. Tuvimos un cambio de horario de la iglesia de último minuto y lo solucionaron en 10 minutos en la plataforma. Nadie se enteró del percance."</p>
+                    <div class="autor">
+                        <h4>Carlos & Elena</h4>
+                        <span>Boda • Jardín Secreto</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) -->
+    <section class="section-padding" id="faqs">
+        <div class="container">
+            <div class="section-header">
+                <span>Consultas</span>
+                <h2>Preguntas Frecuentes</h2>
+                <p>Resolvemos tus dudas de inmediato antes de comenzar.</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué pasa si un invitado no tiene teléfono inteligente?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No te preocupes. El sistema permite descargar pases individuales en formato PDF listos para imprimir o enviar por correo tradicional, garantizando el acceso de todos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Se pueden modificar los datos después de enviarla?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>¡Por supuesto! Al ser una plataforma web dinámica, cualquier cambio de horario, mesa de regalos o ajuste en el cronograma se actualiza al instante sin necesidad de reenviar enlaces nuevos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Con cuánta anticipación debo contratar?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Recomendamos contratar de 1 a 2 meses antes de comenzar a invitar. Sin embargo, nuestro tiempo de entrega promedio es de 3 a 5 días hábiles una vez recibida toda tu información.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. PIE DE PÁGINA -->
+    <footer class="footer">
+        <!-- MODIFICAR AQUÍ: Nombre de tu marca final -->
+        <div class="footer-logo">Gerardo</div>
+        <p>Diseño exclusivo de invitaciones digitales para momentos que duran para siempre.</p>
+        <div class="footer-rights">
+            &copy; 2026 Gerardo. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

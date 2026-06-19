@@ -1,0 +1,420 @@
+/* --- CONFIGURACIÓN DE COLORES Y ESTILOS GLOBALES --- */
+:root {
+    --color-bg: #faf9f6;          /* Marfil suave / Papel fino editorial */
+    --color-text-principal: #111215; /* Negro profundo de lujo */
+    --color-text-secundario: #5c626e; 
+    --color-oro: #bfa15f;         /* Oro satinado premium */
+    --color-oro-soft: #f4eff2; 
+    --border-fino: 1px solid rgba(17, 18, 21, 0.06);
+    --shadow-premium: 0 20px 40px rgba(17, 18, 21, 0.03);
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text-principal);
+    overflow-x: hidden;
+    padding-top: 80px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.bg-alt {
+    background-color: #f3f2ee;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--color-oro);
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.section-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+}
+
+.section-header p {
+    color: var(--color-text-secundario);
+    font-size: 1.05rem;
+    max-width: 550px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    height: 80px;
+    background: rgba(250, 249, 246, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: var(--border-fino);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-text-principal);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-text-secundario);
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover { color: var(--color-oro); }
+
+/* --- BOTONES PREMIUM RECTOS --- */
+.btn {
+    display: inline-block;
+    padding: 16px 36px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 0px; 
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-text-principal);
+    color: #fff;
+    border: 1px solid var(--color-text-principal);
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--color-text-principal);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    border: 1px solid var(--color-text-principal);
+    color: var(--color-text-principal);
+    background: transparent;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-text-principal);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    padding: 120px 0 100px 0;
+    text-align: center;
+    background: radial-gradient(circle at top, #f0ede6 0%, transparent 65%);
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    font-style: italic;
+    color: var(--color-oro);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--color-text-secundario);
+    max-width: 700px;
+    margin: 0 auto 48px auto;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* --- PORTAFOLIO / TABS --- */
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--color-text-secundario);
+    cursor: pointer;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 1px;
+    background-color: var(--color-oro);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.tab-btn.active { color: var(--color-text-principal); }
+.tab-btn.active::after { transform: scaleX(1); }
+
+.gallery-panel {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.gallery-panel.active { display: grid; }
+
+.demo-card {
+    background: #fff;
+    border-radius: 0px;
+    border: var(--border-fino);
+    overflow: hidden;
+    box-shadow: var(--shadow-premium);
+    transition: transform 0.3s;
+}
+
+.demo-card:hover { transform: translateY(-5px); }
+
+.demo-info { padding: 28px; text-align: center; }
+.demo-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; margin-bottom: 8px; }
+.demo-info p { font-size: 0.85rem; color: var(--color-text-secundario); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+
+/* --- CUADRÍCULA DE BENEFICIOS --- */
+.grid-beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.beneficio-card {
+    background: #fff;
+    padding: 48px 40px;
+    border-radius: 0px;
+    border: var(--border-fino);
+    box-shadow: var(--shadow-premium);
+    transition: all 0.4s ease;
+}
+
+.beneficio-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-oro);
+}
+
+.beneficio-card .icon {
+    font-size: 2.2rem;
+    color: var(--color-oro);
+    margin-bottom: 24px;
+    display: inline-block;
+    border-bottom: 1px solid var(--color-oro);
+    padding-bottom: 8px;
+}
+
+.beneficio-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+
+.beneficio-card p {
+    color: var(--color-text-secundario);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* --- CÓMO FUNCIONA --- */
+.grid-pasos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.paso-card { text-align: center; padding: 20px; }
+.paso-numero { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: #e3dfd5; line-height: 1; margin-bottom: 10px; }
+.paso-card:hover .paso-numero { color: var(--color-oro); }
+.paso-card h3 { font-size: 1.15rem; font-weight: 500; margin-bottom: 12px; }
+.paso-card p { font-size: 0.9rem; color: var(--color-text-secundario); line-height: 1.6; font-weight: 300; }
+
+/* --- PRECIOS (CORREGIDA CON AUTO-ENCUADRE) --- */
+.grid-precios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    justify-content: center;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.precio-card {
+    background: #fff;
+    padding: 56px 48px;
+    border-radius: 0px;
+    border: var(--border-fino);
+    box-shadow: var(--shadow-premium);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.precio-card.popular { border: 1px solid var(--color-oro); }
+
+.badge-popular {
+    position: absolute;
+    top: -12px;
+    left: 48px;
+    background-color: var(--color-oro);
+    color: #fff;
+    padding: 4px 16px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.precio-header h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; margin-bottom: 8px; }
+.precio-header .price { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; margin: 24px 0; color: var(--color-text-principal); }
+.precio-header .price span { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; color: var(--color-text-secundario); font-weight: 400; }
+
+.precio-features { list-style: none; margin: 24px 0 32px 0; border-top: var(--border-fino); padding-top: 24px;}
+.precio-features li { font-size: 0.95rem; color: var(--color-text-secundario); margin-bottom: 14px; display: flex; align-items: center; gap: 14px; font-weight: 300; }
+.precio-features li::before { content: "—"; color: var(--color-oro); }
+
+/* CLASE MEJORADA CON BOX-SIZING PARA ENCUADRE PERFECTO */
+.btn-precio { 
+    width: 100%; 
+    display: block;
+    text-align: center; 
+    box-sizing: border-box; 
+    margin-top: auto;
+}
+
+/* --- SECCIÓN GARANTÍA --- */
+.garantia-section {
+    background-color: #111215;
+    color: #fff;
+    text-align: center;
+    padding: 80px 24px;
+}
+
+.garantia-content { max-width: 650px; margin: 0 auto; }
+.garantia-content .shield-icon { font-size: 2.5rem; color: var(--color-oro); margin-bottom: 20px; }
+.garantia-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin-bottom: 16px; font-weight: 300; }
+.garantia-content p { font-size: 1rem; color: #a2a8b9; font-weight: 300; line-height: 1.7; }
+
+/* --- TESTIMONIOS --- */
+.grid-testimonios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonio-card {
+    background: #fff;
+    padding: 36px;
+    border-radius: 0px;
+    border: var(--border-fino);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-premium);
+}
+
+.estrellas { color: var(--color-oro); margin-bottom: 16px; font-size: 0.85rem; letter-spacing: 3px; }
+.comentario { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--color-text-principal); line-height: 1.6; font-style: italic; margin-bottom: 24px; font-weight: 300; }
+.autor h4 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-principal); margin-bottom: 4px; }
+.autor span { font-size: 0.75rem; color: var(--color-text-secundario); text-transform: uppercase; }
+
+/* --- ACCORDEÓN FAQ --- */
+.faq-container { max-width: 750px; margin: 0 auto; }
+.faq-item { background: #fff; border: var(--border-fino); border-radius: 0px; margin-bottom: 16px; overflow: hidden; box-shadow: var(--shadow-premium); }
+.faq-question { padding: 24px 32px; width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; text-align: left; font-size: 1.05rem; font-weight: 500; color: var(--color-text-principal); cursor: pointer; }
+.faq-question:hover { color: var(--color-oro); }
+.faq-icon { font-size: 1.2rem; transition: transform 0.3s ease; color: var(--color-oro); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1); background-color: #fafbfc; }
+.faq-answer p { padding: 0 32px 24px 32px; color: var(--color-text-secundario); font-size: 0.95rem; line-height: 1.6; font-weight: 300; }
+.faq-item.active .faq-icon { transform: rotate(45deg); }
+
+/* --- FOOTER --- */
+.footer { background-color: #111215; color: #a2a8b9; padding: 60px 24px 30px 24px; text-align: center; }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #fff; letter-spacing: 2px; margin-bottom: 16px; text-transform: uppercase; }
+.footer p { font-size: 0.9rem; font-weight: 300; margin-bottom: 24px; }
+.footer-rights { font-size: 0.75rem; color: #494e57; border-top: 1px solid #1e2029; padding-top: 24px; }
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+    .navbar { height: 70px; }
+    body { padding-top: 70px; }
+    .nav-menu { display: none; }
+    .hero h1 { font-size: 3rem; }
+    .hero p { font-size: 1.1rem; }
+    .section-header h2 { font-size: 2.3rem; }
+    .beneficio-card, .precio-card, .testimonio-card { padding: 32px 24px; }
+}
