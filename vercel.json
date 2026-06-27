@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/Botánica_Romance_Bodas", "destination": "/Botánica_Romance_Bodas.html" },
-    { "source": "/Elegancia_Clásica_Bodas", "destination": "/Elegancia_Clásica_Bodas.html" }
-  ]
-}
